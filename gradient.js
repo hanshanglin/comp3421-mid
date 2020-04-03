@@ -28,16 +28,16 @@ function updateGradient() {
 	var r1 = Math.round(istep * c0_0[0] + step * c0_1[0]);
 	var g1 = Math.round(istep * c0_0[1] + step * c0_1[1]);
 	var b1 = Math.round(istep * c0_0[2] + step * c0_1[2]);
-	var color1 = "rgb(" + r1 + "," + g1 + "," + b1 + ")";
+	var color1 = "rgb(" + r1 + "," + g1 + "," + b1 + ",0.6)";
 
 	var r2 = Math.round(istep * c1_0[0] + step * c1_1[0]);
 	var g2 = Math.round(istep * c1_0[1] + step * c1_1[1]);
 	var b2 = Math.round(istep * c1_0[2] + step * c1_1[2]);
-	var color2 = "rgb(" + r2 + "," + g2 + "," + b2 + ")";
+	var color2 = "rgb(" + r2 + "," + g2 + "," + b2 + ",0.6)";
 
 	//TODO: random dir
-	document.getElementById("gradient").style.background = "-webkit-gradient(linear, left bottom, right top, from(" + color1 + "), to(" + color2 + "))";
-	document.getElementById("gradient").style.background = "-moz-linear-gradient(left, " + color1 + " 0%, " + color2 + " 100%)";
+	document.getElementById("gradient").style.background = " linear-gradient(127deg, " + color1 + ", " + color2 + " 70%)";
+	//document.getElementById("gradient").style.background = "-moz-linear-gradient(left, " + color1 + " 0%, " + color2 + " 100%)";
 
 	step += gradientSpeed;
 	if (step >= 1) {
